@@ -131,32 +131,32 @@ class Steganography:
 
 # Osadzam komunikat w obrazie BMP algorytmem LSB (najmniej znaczący bit)
 container_path = 'sample.bmp'
-# first_message = "Kogut Dawid Piotr"
-# second_message = "Platforma stosujaca steganografie do ukrywania tekstow w obrazach, niezaleznie od formatu pliku (BMP, PNG, JPG), zapewnia wysoki poziom bezpieczenstwa danych. Mechanizmy steganograficzne sa skuteczne w ukrywaniu informacji, co utrudnia dostep osobom nieuprawnionym, az do momentu wykrycia metody stosowanej przez platforme. Wizualne efekty ukrywania tekstu w obrazkach sa tak subtelne, ze ludzkie oko nie jest w stanie wykryc roznic na pierwszy rzut oka. Nawet przy uzyciu roznych formatow plikow (BMP, PNG, JPG), efekt ukrywania jest niezauwazalny dla przecietnego uzytkownika. Istotne jest, ze proces ukrywania tekstu w obrazach nie wplywa negatywnie na jakosc obrazow. Nawet przy szczegolowych analizach, dopiero roznice w obrazie Malewicza mogly byc zauwazone tylko przy uzyciu przyblizenia i to na obszarach o jednolitych kolorach, co swiadczy o wysokiej jakosci steganografii stosowanej przez platforme. Metody odzyskiwania danych z zakodowanych tekstow w obrazach dzialaja bez zarzutow. Proces odkodowywania ukrytych informacji jest sprawny i nie wymaga specjalistycznych narzedzi czy zaawansowanej wiedzy. Problemem platformy jest to, ze kazdy obraz po zakodowaniu w nim tekstu jest generowany w formacie PNG niezaleznie od formatu zrodlowego. Uwazam, ze ten problem moze miec wplyw na ocene dzialania platformy dla roznych formatow plikow graficznych."
-# output_first_lsb_path = 'output_first_lsb.bmp'
-# output_second_lsb_path = 'output_second_lsb.bmp'
-# Steganography.embed_lsb(container_path, first_message, output_first_lsb_path)
-# Steganography.embed_lsb(container_path, second_message, output_second_lsb_path)
-#
-# # Wydobywam komunikat z osadzonego obrazu BMP algorytmem LSB
-# extracted_first_message_lsb = Steganography.extract_lsb(output_first_lsb_path)
-# extracted_second_message_lsb = Steganography.extract_lsb(output_second_lsb_path)
-#
-# print("Pierwsza wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem LSB:", extracted_first_message_lsb)
-# print("Druga wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem LSB:", extracted_second_message_lsb)
-#
-# # Osadzam komunikat w obrazie BMP algorytmem MSB (najbardziej znaczący bit)
-# output_first_msb_path = 'output_first_msb.bmp'
-# output_second_msb_path = 'output_second_msb.bmp'
-# Steganography.embed_msb(container_path, first_message, output_first_msb_path)
-# Steganography.embed_msb(container_path, second_message, output_second_msb_path)
-#
-# # Wydobywam komunikat z osadzonego obrazu BMP algorytmem MSB
-# extracted_first_message_msb = Steganography.extract_msb(output_first_msb_path)
-# extracted_second_message_msb = Steganography.extract_msb(output_second_msb_path)
-#
-# print("Pierwsza wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem MSB:", extracted_first_message_msb)
-# print("Druga wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem MSB:", extracted_second_message_msb)
+first_message = "Kogut Dawid Piotr"
+second_message = "Platforma stosujaca steganografie do ukrywania tekstow w obrazach, niezaleznie od formatu pliku (BMP, PNG, JPG), zapewnia wysoki poziom bezpieczenstwa danych. Mechanizmy steganograficzne sa skuteczne w ukrywaniu informacji, co utrudnia dostep osobom nieuprawnionym, az do momentu wykrycia metody stosowanej przez platforme. Wizualne efekty ukrywania tekstu w obrazkach sa tak subtelne, ze ludzkie oko nie jest w stanie wykryc roznic na pierwszy rzut oka. Nawet przy uzyciu roznych formatow plikow (BMP, PNG, JPG), efekt ukrywania jest niezauwazalny dla przecietnego uzytkownika. Istotne jest, ze proces ukrywania tekstu w obrazach nie wplywa negatywnie na jakosc obrazow. Nawet przy szczegolowych analizach, dopiero roznice w obrazie Malewicza mogly byc zauwazone tylko przy uzyciu przyblizenia i to na obszarach o jednolitych kolorach, co swiadczy o wysokiej jakosci steganografii stosowanej przez platforme. Metody odzyskiwania danych z zakodowanych tekstow w obrazach dzialaja bez zarzutow. Proces odkodowywania ukrytych informacji jest sprawny i nie wymaga specjalistycznych narzedzi czy zaawansowanej wiedzy. Problemem platformy jest to, ze kazdy obraz po zakodowaniu w nim tekstu jest generowany w formacie PNG niezaleznie od formatu zrodlowego. Uwazam, ze ten problem moze miec wplyw na ocene dzialania platformy dla roznych formatow plikow graficznych."
+output_first_lsb_path = 'output_first_lsb.bmp'
+output_second_lsb_path = 'output_second_lsb.bmp'
+Steganography.embed_lsb(container_path, first_message, output_first_lsb_path)
+Steganography.embed_lsb(container_path, second_message, output_second_lsb_path)
+
+# Wydobywam komunikat z osadzonego obrazu BMP algorytmem LSB
+extracted_first_message_lsb = Steganography.extract_lsb(output_first_lsb_path)
+extracted_second_message_lsb = Steganography.extract_lsb(output_second_lsb_path)
+
+print("Pierwsza wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem LSB:", extracted_first_message_lsb)
+print("Druga wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem LSB:", extracted_second_message_lsb)
+
+# Osadzam komunikat w obrazie BMP algorytmem MSB (najbardziej znaczący bit)
+output_first_msb_path = 'output_first_msb.bmp'
+output_second_msb_path = 'output_second_msb.bmp'
+Steganography.embed_msb(container_path, first_message, output_first_msb_path)
+Steganography.embed_msb(container_path, second_message, output_second_msb_path)
+
+# Wydobywam komunikat z osadzonego obrazu BMP algorytmem MSB
+extracted_first_message_msb = Steganography.extract_msb(output_first_msb_path)
+extracted_second_message_msb = Steganography.extract_msb(output_second_msb_path)
+
+print("Pierwsza wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem MSB:", extracted_first_message_msb)
+print("Druga wiadomość odczytana z kontenera, w którym zakodowano ją algorytmem MSB:", extracted_second_message_msb)
 
 # Tworze 3 macierze kolorów dla: R,G,B
 Steganography.create_color_matrix(container_path, "matrix_r.bmp", "matrix_g.bmp", "matrix_b.bmp")
